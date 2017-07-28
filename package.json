@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "auth example",
   "scripts": {
-    "start": "cd server && npm i && node api",
-    "postinstall": "cd client && npm i && npm run build:prod"
+    "start": "cd server node api",
+    "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i"
   },
   "author": "",
   "license": "ISC"
