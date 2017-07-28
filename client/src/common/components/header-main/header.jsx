@@ -9,7 +9,7 @@ import {
 import Translate from '../translate/translate';
 import Switcher from '../translate/switcher';
 
-export default () => <Container>
+export default () =>
     <Menu inverted pointing secondary size='large'>
         <Menu.Item as={NavLink} to='/' activeClassName='active'>{<Translate text='header.home' />}</Menu.Item>
         <Menu.Item as={NavLink} to='/faq' activeClassName='active'>{<Translate text='header.faq' />}</Menu.Item>
@@ -17,5 +17,4 @@ export default () => <Container>
             <Button as='span' inverted >{<Translate text='header.login' />}</Button>
         </Menu.Item>
         <Menu.Item as={Switcher} position='right'/>
-    </Menu>
-</Container>
+    </Menu>;

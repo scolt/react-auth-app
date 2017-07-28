@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "node node_modules/webpack/bin/webpack --config webpack-configs/webpack.config.dev.js",
     "build:prod": "node node_modules/webpack/bin/webpack --config webpack-configs/webpack.config.prod.js",
-    "serve": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
+    "serve": "node node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack-configs/webpack.config.dev.js",
     "test": "no test command"
   },
   "keywords": [
