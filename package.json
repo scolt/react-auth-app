@@ -1,0 +1,10 @@
+{
+  "name": "amass",
+  "version": "1.0.0",
+  "scripts": {
+    "client-build": "cd client && npm i && npm run build:prod",
+    "server-start": "cd server && node api"
+  },
+  "author": "",
+  "license": "ISC"
+}

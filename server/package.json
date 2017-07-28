@@ -1,0 +1,29 @@
+{
+  "name": "interview-helper-server",
+  "version": "0.0.1",
+  "description": "Server Side for interview helper desktop",
+  "main": "api.js",
+  "scripts": {
+    "docs": "node node_modules/apidoc/bin/apidoc -i src/ -o public/docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Viktar Parashchanka",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.0",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.3",
+    "crypto": "0.0.3",
+    "express": "4.15.2",
+    "mysql": "2.13.0",
+    "request": "2.81.0",
+    "request-promise": "4.2.0",
+    "sequelize": "3.30.4"
+  },
+  "devDependencies": {
+    "apidoc": "0.17.5"
+  }
+}
