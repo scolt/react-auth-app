@@ -14,11 +14,11 @@ const corsOptions = {
 
 database.init().then(() => {
     app.use(compression());
-    app.use(express.static('public'));
+    app.use(express.static(__dirname + '/public'));
     app.use(cors(corsOptions));
     app.use(cookies());
     app.use(router);
-    app.listen(3000, function () {
+    app.listen(process.env.PORT || 3000, function () {
         console.log('Interview Helper NodeJS server listening on port 3000!');
     });
 });
