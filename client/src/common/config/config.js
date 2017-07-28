@@ -1,3 +1,3 @@
 export default {
-    serverUrl: 'http://ihelper.herokuapp.com'
+    serverUrl: 'https://roauth.herokuapp.com'
 }
