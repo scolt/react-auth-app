@@ -4,8 +4,8 @@
   "description": "Application for monitoring of haurding money for some targets",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --config webpack-configs/webpack.config.dev.js",
-    "build:prod": "webpack --config webpack-configs/webpack.config.prod.js",
+    "build:dev": "node node_modules/webpack/bin/webpack --config webpack-configs/webpack.config.dev.js",
+    "build:prod": "node node_modules/webpack/bin/webpack --config webpack-configs/webpack.config.prod.js",
     "serve": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
     "test": "no test command"
   },
@@ -33,6 +33,7 @@
     "react-dom": "15.6.1",
     "react-redux": "5.0.5",
     "react-router": "4.1.1",
+    "react-router-dom": "4.1.2",
     "redux": "3.7.1",
     "redux-thunk": "2.2.0",
     "semantic-ui-css": "2.2.11",
