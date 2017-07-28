@@ -27,7 +27,7 @@ export default class Login extends React.Component {
                     {' '}React App
                 </Header>
                 <Segment size="large" >
-                    <Button color='vk' size='large' fluid href="http://ihelper.herokuapp.com/auth/vk/local">
+                    <Button color='vk' size='large' fluid href="http://ihelper.herokuapp.com/auth/vk/heroku">
                         <Icon name='vk'/> VK
                     </Button>
                 </Segment>
