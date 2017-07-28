@@ -1,4 +1,6 @@
-const oauthConfig = require('../config').oauth;
+const config = require('../config');
+
+const oauthConfig = config.oauth;
 
 /**
  * Generate VK auth url for getting URL.
@@ -10,7 +12,7 @@ const oauthConfig = require('../config').oauth;
 function generateVkInitUrl(appAlias) {
     return `https://oauth.vk.com/authorize?client_id=${oauthConfig.vk.clientId}` +
         `&display=page` +
-        `&redirect_uri=http://localhost:3000/auth/vk/callback/${appAlias}` +
+        `&redirect_uri=${config.serverDomain}/auth/vk/callback/${appAlias}` +
         `&response_type=code` +
         `&v=5.64`;
 }
@@ -27,7 +29,7 @@ function generateVkInitUrl(appAlias) {
 function generateVkAuthUrl(code, appAlias) {
     return `https://oauth.vk.com/access_token?client_id=${oauthConfig.vk.clientId}` +
         `&client_secret=${oauthConfig.vk.secret}` +
-        `&redirect_uri=http://localhost:3000/auth/vk/callback/${appAlias}` +
+        `&redirect_uri=${config.serverDomain}/auth/vk/callback/${appAlias}` +
         `&code=${code}` +
         `&v=5.64`;
 }
