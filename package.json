@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "auth example",
   "scripts": {
-    "start": "cd server node api",
+    "start": "node server/api",
     "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i"
   },
   "author": "",
