@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Icon, Header, Segment, Image } from 'semantic-ui-react';
-
+import config from '../../../common/config/config';
 import theme from '../../../common/theme/basic';
 
 const Wrapper = styled.div`
@@ -26,9 +26,17 @@ export default class Login extends React.Component {
                     <Image src='/themes/default/assets/images/logo.png' alt="react oauth"/>
                     {' '}React App
                 </Header>
-                <Segment size="large" >
-                    <Button color='vk' size='large' fluid href="https://roauth.herokuapp.com/auth/vk/heroku">
+                <Segment size="large" stacked>
+                    <Button color='vk' size='large' fluid href={`${config.serverUrl}/auth/vk/${config.redirectAuthAlias}`}>
                         <Icon name='vk'/> VK
+                    </Button>
+                    <br/>
+                    <Button color='grey' size='large' fluid href={`${config.serverUrl}/auth/github/${config.redirectAuthAlias}`}>
+                        <Icon name='github'/> GitHub
+                    </Button>
+                    <br/>
+                    <Button color='linkedin' size='large' fluid href={`${config.serverUrl}/auth/linkedin/${config.redirectAuthAlias}`}>
+                        <Icon name='linkedin'/> LinkedIn
                     </Button>
                 </Segment>
             </Block>

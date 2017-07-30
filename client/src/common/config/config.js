@@ -1,3 +1,4 @@
 export default {
-    serverUrl: 'https://roauth.herokuapp.com'
+    serverUrl: process.env.SERVER_URL || 'http://localhost:3000',
+    redirectAuthAlias: 'local'
 }
