@@ -14,7 +14,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js)$/,
-                loader: 'string-replace',
+                loader: 'string-replace-loader',
                 query: {
                     search: '{{SERVER_URL}}',
                     replace: process.env.SERVER_URL,
