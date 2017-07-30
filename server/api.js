@@ -8,7 +8,7 @@ const express = require('express'),
 
 const app = express();
 const corsOptions = {
-    origin: 'http://localhost:8080, http://localhost:3000, https://roauth.herokuapp.com',
+    origin: process.env.SERVER_URL || 'http://localhost:8080',
     credentials: true
 };
 
