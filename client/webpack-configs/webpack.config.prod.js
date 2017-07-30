@@ -13,7 +13,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /config\.js$/,
                 loader: 'string-replace-loader',
                 query: {
                     search: '{{SERVER_URL}}',
