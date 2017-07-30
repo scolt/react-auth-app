@@ -15,6 +15,7 @@ module.exports = {
             {
                 test: /config\.js$/,
                 loader: 'string-replace-loader',
+                exclude: /(node_modules)/,
                 query: {
                     search: '{{SERVER_URL}}',
                     replace: process.env.SERVER_URL,
