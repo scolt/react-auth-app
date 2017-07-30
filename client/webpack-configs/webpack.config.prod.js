@@ -24,7 +24,7 @@ module.exports = {
                     },
                     {
                         search: '{{CALLBACK_ALIAS}}',
-                        replace: process.env.SERVER_URL,
+                        replace: process.env.CALLBACK_ALIAS,
                         strict: true
                     }]
                 }
