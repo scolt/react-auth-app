@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Login extends React.Component {
     componentWillMount() {
-       this.props.ping();
+        this.props.ping();
     }
 
     render() {
@@ -11,7 +11,7 @@ export default class Login extends React.Component {
         }
 
         if (this.props.isLoggedIn) {
-           return this.props.authorizedContent
+            return this.props.authorizedContent;
         }
 
         return this.props.unathorizedContent;

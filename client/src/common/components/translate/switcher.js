@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import Switcher from './components/switcher';
 import translation from './actions/translation';
 
 const mapStateToProps = state => {
     return {
         lang: state.translate.get('language')
-    }
+    };
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -19,4 +19,4 @@ const VisibleTranslateSwitcher = connect(
     mapDispatchToProps
 )(Switcher);
 
-export default VisibleTranslateSwitcher
+export default VisibleTranslateSwitcher;

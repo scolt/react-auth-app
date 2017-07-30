@@ -1,12 +1,10 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import Login from './components/login';
 
-const mapStateToProps = state => {
-    return {}
-};
+const mapStateToProps = () => ({});
 
 const VisibleLogin = connect(
     mapStateToProps
 )(Login);
 
-export default VisibleLogin
+export default VisibleLogin;

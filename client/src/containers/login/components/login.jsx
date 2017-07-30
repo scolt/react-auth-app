@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Icon, Header, Segment, Image } from 'semantic-ui-react';
+import {Button, Icon, Header, Segment, Image} from 'semantic-ui-react';
 import config from '../../../common/config/config';
 import theme from '../../../common/theme/basic';
 
@@ -27,15 +27,18 @@ export default class Login extends React.Component {
                     {' '}React App
                 </Header>
                 <Segment size="large" stacked>
-                    <Button color='vk' size='large' fluid href={`${config.serverUrl}/auth/vk/${config.redirectAuthAlias}`}>
+                    <Button color='vk' size='large' fluid
+                        href={`${config.serverUrl}/auth/vk/${config.redirectAuthAlias}`}>
                         <Icon name='vk'/> VK
                     </Button>
                     <br/>
-                    <Button color='grey' size='large' fluid href={`${config.serverUrl}/auth/github/${config.redirectAuthAlias}`}>
+                    <Button color='grey' size='large' fluid
+                        href={`${config.serverUrl}/auth/github/${config.redirectAuthAlias}`}>
                         <Icon name='github'/> GitHub
                     </Button>
                     <br/>
-                    <Button color='linkedin' size='large' fluid href={`${config.serverUrl}/auth/linkedin/${config.redirectAuthAlias}`}>
+                    <Button color='linkedin' size='large' fluid
+                        href={`${config.serverUrl}/auth/linkedin/${config.redirectAuthAlias}`}>
                         <Icon name='linkedin'/> LinkedIn
                     </Button>
                 </Segment>

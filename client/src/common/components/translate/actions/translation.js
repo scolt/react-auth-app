@@ -16,8 +16,8 @@ class LanguageService {
             dispatch({
                 type: 'changeLanguage',
                 value: lang
-            })
-        }
+            });
+        };
     }
 
     getCurrentLanguage() {
@@ -25,12 +25,12 @@ class LanguageService {
     }
 
     translate(key) {
-        return key.split('.').reduce(function(prev, curr) {
-            return prev ? prev[curr] : undefined
+        return key.split('.').reduce(function (prev, curr) {
+            return prev ? prev[curr] : undefined;
         }, this.languages[this.currentLanguage]);
     }
 }
 
 export default new LanguageService('en', {
     en, ru
-})
+});

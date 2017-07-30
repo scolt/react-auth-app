@@ -1,14 +1,14 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import List from './components/list';
 import api from '../../common/actions/api';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 const mapDispatchToProps = dispatch => ({
     onLogoutClick: () => {
         dispatch(api({
             model: 'users',
             action: 'logout'
-        }))
+        }));
     }
 });
 
@@ -17,4 +17,4 @@ const VisibleList = connect(
     mapDispatchToProps
 )(List);
 
-export default VisibleList
+export default VisibleList;

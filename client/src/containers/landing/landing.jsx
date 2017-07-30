@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {
     Button,
     Container,
@@ -60,11 +60,15 @@ export default () => <div>
                 <Grid.Column width={8}>
                     <Header as='h3'>This is app without idea</Header>
                     <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dolor augue, vulputate id lectus vel, malesuada malesuada velit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dolor augue, vulputate id
+                        lectus vel, malesuada malesuada velit.
                     </Text>
                     <Header as='h3'>We Make Bananas That Can Dance</Header>
                     <Text>
-                        Cras eu odio vel turpis fringilla imperdiet molestie in velit. Integer ac fermentum nunc, vitae consectetur sem. Donec semper elit risus, eget mollis felis suscipit vel. Etiam viverra laoreet tortor, vitae porta dui. Aliquam sed lectus quis est mollis egestas quis sed augue. Integer eleifend massa vitae sollicitudin elementum. Cras varius sollicitudin neque non convallis.
+                        Cras eu odio vel turpis fringilla imperdiet molestie in velit. Integer ac fermentum nunc, vitae
+                        consectetur sem. Donec semper elit risus, eget mollis felis suscipit vel. Etiam viverra laoreet
+                        tortor, vitae porta dui. Aliquam sed lectus quis est mollis egestas quis sed augue. Integer
+                        eleifend massa vitae sollicitudin elementum. Cras varius sollicitudin neque non convallis.
                     </Text>
                 </Grid.Column>
                 <Grid.Column floated='right' width={6}>

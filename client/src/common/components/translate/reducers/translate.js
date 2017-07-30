@@ -1,4 +1,4 @@
-import { Map } from 'immutable';
+import {Map} from 'immutable';
 import translation from '../actions/translation';
 
 export default (state = Map({
@@ -10,4 +10,4 @@ export default (state = Map({
     }
 
     return state;
-}
+};

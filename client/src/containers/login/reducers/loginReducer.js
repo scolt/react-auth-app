@@ -1,4 +1,4 @@
-import { Map } from 'immutable';
+import {Map} from 'immutable';
 
 export default (state = Map({
     isLoggedIn: false,
@@ -25,4 +25,4 @@ export default (state = Map({
     }
 
     return state;
-}
+};

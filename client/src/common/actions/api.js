@@ -1,6 +1,6 @@
 import api from '../../utility/http';
 
-export default ({model, action, method = 'get', params = {}}) => {
+export default ({model, action, method = 'get'}) => {
     return (dispatch, getState) => {
         const payload = method === 'post' ? getState()[model] && getState()[model].payload : null;
         const type = `${model}#${action}`;
@@ -33,9 +33,9 @@ export default ({model, action, method = 'get', params = {}}) => {
         };
 
         api.request(`/${model}/${action}`, options).then((result) => {
-            result.status < 400 ? successCall() : errorCall(result.statusText)
+            result.status < 400 ? successCall() : errorCall(result.statusText);
         }, (error) => {
             errorCall(error);
-        })
-    }
-}
+        });
+    };
+};

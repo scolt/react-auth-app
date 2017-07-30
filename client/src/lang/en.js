@@ -10,4 +10,4 @@ export default {
             text: 'Page is not found or you don\'t have permissions for reviewing this.'
         }
     }
-}
+};

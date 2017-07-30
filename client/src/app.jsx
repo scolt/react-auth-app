@@ -8,12 +8,12 @@ import 'whatwg-fetch';
 import './common/theme/assets/logo.png';
 
 import React from 'react';
-import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { render } from 'react-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import {render} from 'react-dom';
 
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
 import reducers from './common/reducers/reducers.js';
 
 import Login from './containers/login/login';
@@ -29,7 +29,6 @@ const store = createStore(
     applyMiddleware(thunk)
 );
 
-
 const App = () => (
     <Provider store={store}>
         <Guard
@@ -39,7 +38,7 @@ const App = () => (
                     <Switch>
                         <Route exact path="/" component={Landing}/>
                         <Route exact path="/login" component={Login}/>
-                        <Route path="*" component={NotFound} />
+                        <Route path="*" component={NotFound}/>
                     </Switch>
                 </Router>
             }
@@ -47,7 +46,7 @@ const App = () => (
                 <Router>
                     <Switch>
                         <Route exact path="/" component={List}/>
-                        <Route path="*" component={NotFound} />
+                        <Route path="*" component={NotFound}/>
                     </Switch>
                 </Router>
             }
