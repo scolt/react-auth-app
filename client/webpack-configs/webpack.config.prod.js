@@ -17,9 +17,16 @@ module.exports = {
                 loader: 'string-replace-loader',
                 exclude: /(node_modules)/,
                 query: {
-                    search: '{{SERVER_URL}}',
-                    replace: process.env.SERVER_URL,
-                    strict: true
+                    multiple: [{
+                        search: '{{SERVER_URL}}',
+                        replace: process.env.SERVER_URL,
+                        strict: true
+                    },
+                    {
+                        search: '{{CALLBACK_ALIAS}}',
+                        replace: process.env.SERVER_URL,
+                        strict: true
+                    }]
                 }
             },
             {
