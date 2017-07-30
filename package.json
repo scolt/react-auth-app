@@ -1,12 +1,16 @@
 {
-    "name": "amass",
-    "version": "1.0.0",
-    "description": "auth example",
-    "scripts": {
-        "start": "node server/api",
-        "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i",
-        "lint-all": "cd client && npm run eslint && cd ../server && npm run eslint"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "amass",
+  "version": "1.0.0",
+  "description": "auth example",
+  "scripts": {
+    "start": "node server/api",
+    "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i && cd ../ && npm run clear",
+    "clear": "node node_modules/rimraf ./client",
+    "lint-all": "cd client && npm run eslint && cd ../server && npm run eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "2.6.1"
+  }
 }
