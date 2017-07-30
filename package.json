@@ -4,8 +4,8 @@
   "description": "auth example",
   "scripts": {
     "start": "node server/api",
-    "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i && cd ../ && npm run clear",
-    "clear": "node node_modules/rimraf ./client",
+    "postinstall": "cd client && npm i && npm run build:prod && cd ../server && npm i && cd ../ && npm run clean",
+    "clean": "node node_modules/rimraf/bin ./client ./node_modules",
     "lint-all": "cd client && npm run eslint && cd ../server && npm run eslint"
   },
   "author": "",
