@@ -1,4 +1,3 @@
-const request = require('request');
 const Auth = require('./auth-base');
 
 module.exports = class AuthGithub extends Auth {
@@ -11,4 +10,4 @@ module.exports = class AuthGithub extends Auth {
             email: userData.email
         };
     }
-}
+};

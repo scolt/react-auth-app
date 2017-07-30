@@ -56,7 +56,6 @@ auths.forEach((config) => {
     router.get(`/${config.config.socialName}/callback/:redirectUrl`, (req, res) => {
         let params = url.parse(req.url, true).query;
         provider.authenticate(params.code, req.params.redirectUrl).then(authResult => {
-            console.log(authResult);
             res.cookie('token', authResult.token, { maxAge: 900000, httpOnly: true });
             res.redirect(`${authResult.domain}`);
         }).catch(error => {

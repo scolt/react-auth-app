@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const config = require('../config');
 const db = new Sequelize(config.mysql_cs, {
-    logging: () => console.log('Any operation with DB')
+    logging: () => console.info('Any operation with DB')
 });
 
 const user = require('../models/user');
@@ -18,7 +18,7 @@ function init() {
     return Promise.all([
         User.sync()
     ]).then(() => {
-        console.log('User database: Initialized');
+        console.info('User database: Initialized');
         models.user = User;
     }).catch((error) => {
         console.error(error);

@@ -4,7 +4,7 @@ const Auth = require('./auth-base');
 module.exports = class AuthVK extends Auth {
     processAuthData(userAuthData) {
         this.email = userAuthData.email;
-        return request.get(this.getApiReq(userAuthData.access_token, {}))
+        return request.get(this.getApiReq(userAuthData.access_token, {}));
     }
 
     processUserData(userData) {

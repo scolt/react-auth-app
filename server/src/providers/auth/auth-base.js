@@ -22,11 +22,11 @@ module.exports = class Auth {
 
     getInitUrl(appAlias) {
         return `${this.baseOauthUrl}?client_id=${oauthConfig[this.socialName].clientId}` +
-            `&display=page` +
-            `&response_type=code` +
+            '&display=page' +
+            '&response_type=code' +
             `&redirect_uri=${globalConfig.serverDomain}/auth/${this.socialName}/callback/${appAlias}` +
             `&scope=${this.config.scope}` +
-            `&v=5.64`;
+            '&v=5.64';
     }
 
     getAuthReq(code, appAlias) {
@@ -34,24 +34,24 @@ module.exports = class Auth {
             `&client_secret=${oauthConfig[this.socialName].secret}` +
             `&redirect_uri=${globalConfig.serverDomain}/auth/${this.socialName}/callback/${appAlias}` +
             `&code=${code}` +
-            `&grant_type=authorization_code` +
-            `&v=5.64`;
+            '&grant_type=authorization_code' +
+            '&v=5.64';
 
         return {
             url: url,
             headers: this.requestOpts.headers
-        }
+        };
     }
 
     getApiReq(token, params) {
         const reqParams = Object.keys(params).map((item) => item + '=' + params[item]).join('&');
         const url = `${this.baseApiUrl}/${this.userApiMethod}?&access_token=${token}` +
-            `&v=5.64` +
+            '&v=5.64' +
             `&${reqParams}`;
         return {
             url: url,
             headers: this.requestOpts.headers
-        }
+        };
     }
 
     tryIdentifyUser(userData) {
@@ -60,7 +60,7 @@ module.exports = class Auth {
         if (userData[this.config.keyId]) {
             const keyCondition = {};
             keyCondition[this.config.keyId] = userData[this.config.keyId];
-            conditions.push(keyCondition)
+            conditions.push(keyCondition);
         }
 
         if (userData.email) {
@@ -83,9 +83,9 @@ module.exports = class Auth {
                 isAdditionalUser: isAdditionalUser,
                 isNewUser: isNewUser,
                 user: userData
-            }
+            };
         });
-    };
+    }
 
     processAuthData(userAuthData) {
         return request.get(this.getApiReq(userAuthData.access_token, {}));
@@ -129,7 +129,7 @@ module.exports = class Auth {
             return {
                 domain: domain,
                 token: token
-            }
+            };
         });
     }
 };

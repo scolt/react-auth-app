@@ -32,7 +32,7 @@ router.get('/ping', (req, res) => {
         }
     }).then((user) => {
         if (!user) {
-            res.status(401).end()
+            res.status(401).end();
         } else {
             res.end('works');
         }

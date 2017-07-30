@@ -4,3 +4,4 @@ server/node_modules
 client/public
 server/out
 server/public
+npm-debug.log
