@@ -13,6 +13,15 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(js)$/,
+                loader: 'string-replace',
+                query: {
+                    search: '{{SERVER_URL}}',
+                    replace: process.env.SERVER_URL,
+                    strict: true
+                }
+            },
+            {
                 test: /\.(jsx|js)$/,
                 exclude: /(node_modules)/,
                 use: {
