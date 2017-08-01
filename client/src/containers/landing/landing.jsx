@@ -11,6 +11,7 @@ import {
 import styled from 'styled-components';
 
 import HeaderMain from '../../common/components/header-main/header';
+import Translate from '../../common/components/translate/translate';
 
 const AppName = styled.h1`
     font-size: 3em !important;
@@ -48,7 +49,7 @@ export default () => <div>
             <br />
             <Link to='/login'>
                 <Button as='span' color='blue' size='huge'>
-                    Get Started
+                    <Translate text="pages.landing.getStarted" />
                     <Icon name='right arrow'/>
                 </Button>
             </Link>

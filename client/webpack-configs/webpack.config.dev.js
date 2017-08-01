@@ -12,6 +12,23 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /config\.js$/,
+                loader: 'string-replace-loader',
+                exclude: /(node_modules)/,
+                query: {
+                    multiple: [{
+                        search: '{{SERVER_URL}}',
+                        replace: process.env.SERVER_URL || 'http://localhost:3000',
+                        strict: true
+                    },
+                        {
+                            search: '{{CALLBACK_ALIAS}}',
+                            replace: process.env.CALLBACK_ALIAS || 'local',
+                            strict: true
+                        }]
+                }
+            },
+            {
                 test: /\.(jsx|js)$/,
                 exclude: /(node_modules)/,
                 use: {

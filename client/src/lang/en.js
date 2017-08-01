@@ -8,6 +8,9 @@ export default {
         404: {
             header: 'Ohhh... something went wrong',
             text: 'Page is not found or you don\'t have permissions for reviewing this.'
+        },
+        landing: {
+            getStarted: 'Get Started'
         }
     }
 };

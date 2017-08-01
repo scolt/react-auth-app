@@ -19,12 +19,12 @@ module.exports = {
                 query: {
                     multiple: [{
                         search: '{{SERVER_URL}}',
-                        replace: process.env.SERVER_URL,
+                        replace: process.env.SERVER_URL || 'http://localhost:3000',
                         strict: true
                     },
                     {
                         search: '{{CALLBACK_ALIAS}}',
-                        replace: process.env.CALLBACK_ALIAS,
+                        replace: process.env.CALLBACK_ALIAS || 'local',
                         strict: true
                     }]
                 }
